@@ -3,7 +3,7 @@
         <b-navbar fixed="bottom">
             <b-navbar-brand class="text-white">shsh.xyz</b-navbar-brand>
             <b-navbar-nav>
-                <button class="btn btn-info">></button>
+                <router-link :to="{ name: 'home', params: {} }"><button class="btn btn-info"><</button></router-link>
             </b-navbar-nav>
         </b-navbar>
         <div id='content'>

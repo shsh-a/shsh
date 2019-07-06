@@ -1,7 +1,7 @@
 <template>
-    <div  id="keto" class="container">
+    <div  ref="bg" id="keto" class="container">
         <h1>Diet plan</h1>
-        <table>
+        <table ref="table">
             <tr>
                 <th>
                     Item
@@ -122,6 +122,10 @@ export default{
             maxFat:130,
         }
     },
+    mounted(){
+        //console.log(this.$refs.table.style);
+        this.$refs.bg.style.padding = 50;
+    },
     computed:{
         total:function(){
             let total = {};
@@ -146,6 +150,7 @@ export default{
         },
         clear: function(){
             this.items = [];
+            //this.total = [];
         },
         add: function(){
             for(let index in this.item)
@@ -165,13 +170,13 @@ export default{
 <style>
 .controls{
     margin-left: 100px;
-    
+
 }
 .bar{
     margin: 10px;
 }
 #keto{
-    padding: 50px;
+    padding:  5%;
     background-color: rgba(0, 0, 0, 0.8);
 }
 .total{
