@@ -1,28 +1,40 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div>
+        <b-navbar fixed="bottom">
+            <b-navbar-brand class="text-white">shsh.xyz</b-navbar-brand>
+            <b-navbar-nav>
+                <button class="btn btn-info">></button>
+            </b-navbar-nav>
+        </b-navbar>
+        <div id='content'>
+
+        </div>
+        <div id="app">
+            <router-view></router-view>
+        </div>
+    </div>
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
+    name: 'app',
+    components: {  },
+    data: function(){
+        return {
+        }
+    },
+    methods:{
+    },
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style >
+#content{
+    margin: 100px;
 }
+body{
+    background-image: url('assets/bg.jpg');
+    color:#fff;
+    font-family: Ubuntu;
+}
+
+
 </style>
